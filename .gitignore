@@ -1,0 +1,44 @@
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+######################
+# Logs and databases #
+######################
+*.log
+*.sqlite
+# OS generated files #
+######################
+.DS_Store?
+ehthumbs.db
+Thumbs.db
+[Bb]in
+[Oo]bj
+[Tt]est[Rr]esults
+*.suo
+*.user
+*.[Cc]ache
+*[Rr]esharper*
+packages
+NuGet.exe
+_[Ss]cripts
+*.exe
+*.dll
+*.nupkg
+*.ncrunchsolution
+*.dot[Cc]over
+
+# Dependency directories
+node_modules
+jspm_packages
+
+# Optional npm cache directory
+.npm
+npm-debug.log*
+
+# Optional eslint cache
+.eslintcache
