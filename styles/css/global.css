@@ -245,7 +245,7 @@ Footer styling
   background: rgba(0, 0, 0, 0.7);
   width: 50%;
   display: inline-block;
-  height: 2px;
+  height: 4px;
   margin-top: -2px;
   vertical-align: middle;
   position: relative;
@@ -274,8 +274,8 @@ Footer styling
 
 .project-item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 calc(50%);
-          flex: 0 1 calc(50%);
+      -ms-flex: 0 1 calc(50% - 2rem - 4px);
+          flex: 0 1 calc(50% - 2rem - 4px);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -284,6 +284,8 @@ Footer styling
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   height: 150px;
+  margin: 1rem;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
 .project-item:hover {
@@ -296,8 +298,6 @@ Footer styling
 .project-item:hover .project-overlay {
   -webkit-transform: scale(1) translateY(-50%);
           transform: scale(1) translateY(-50%);
-  text-align: center;
-  margin-top: 75px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -312,10 +312,10 @@ Footer styling
   background-color: rgba(0, 0, 0, 0.8);
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  -webkit-transform: scale(0) translateY(-50%);
+          transform: scale(0) translateY(-50%);
   text-align: center;
-  margin-top: 0;
+  margin-top: 75px;
 }
 
 .project-title {
