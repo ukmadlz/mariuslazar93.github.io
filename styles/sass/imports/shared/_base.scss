@@ -1,0 +1,28 @@
+/*************************************
+Main layout styling
+*************************************/
+
+body{
+  padding:4rem 2rem;
+  background-color: $background-color;
+}
+
+.page-wrapper{
+  margin:0 auto;
+  max-width:70rem;
+}
+
+.panel{
+  padding:2rem;
+
+  &.panel-light{
+    background-color:$panel-color;
+    border-top: 0.8rem solid $border-color;
+  }
+}
+
+@media (max-width: 767px){
+  body{
+    padding:2rem 1rem;
+  }
+}

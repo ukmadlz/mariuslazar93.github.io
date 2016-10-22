@@ -1,0 +1,17 @@
+/*************************************
+This is a partial which contains all SASS files developed for the project.
+*************************************/
+
+@import "imports/mixins/_variables";
+@import "imports/mixins/_typography";
+
+@import "imports/shared/_utility";
+@import "imports/shared/_buttons";
+@import "imports/shared/_header";
+@import "imports/shared/_base";
+@import "imports/shared/_footer";
+
+
+@import "imports/components/_decorated-title";
+@import "imports/components/_projects";
+@import "imports/components/_media-object";

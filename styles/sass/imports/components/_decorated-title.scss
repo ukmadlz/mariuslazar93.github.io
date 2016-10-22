@@ -1,0 +1,26 @@
+.decorated-title {
+            text-align: center;
+            overflow: hidden;
+            display: block;
+
+            &::before, &::after {
+                content: '';
+                background: $primary-color;
+                width: 50%;
+                display: inline-block;
+                height: 2px;
+                margin-top:-2px;
+                vertical-align: middle;
+                position: relative;
+            }
+
+            &::before {
+                margin-left: -50%;
+                left: -2rem;
+            }
+
+            &::after {
+                margin-right: -50%;
+                right: -2rem;
+            }
+        }

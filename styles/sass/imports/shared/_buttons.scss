@@ -1,0 +1,55 @@
+
+a{
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover{
+
+  }
+
+  &:active{
+
+  }
+
+  &:visited{
+
+  }
+}
+
+.button{
+  width: auto;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
+  color: #eee;
+  padding:10px 15px;
+  transition: all 0.3s linear;
+  &.primary{
+    background-color: $accent-color;
+
+    &:hover{
+      background-color: $accent-color-hover;
+    }
+  }
+}
+
+.link{
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: lowercase;
+  letter-spacing: 0.2rem;
+  &:hover{
+    text-decoration: underline;
+  }
+
+  &.primary{
+    &:hover{
+      color: $accent-color;
+
+    }
+  }
+}

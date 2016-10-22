@@ -1,0 +1,16 @@
+.media-object{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  text-align: center;
+}
+
+.media-left{
+  flex: 1 1 30%;
+}
+
+.media-right{
+  flex: 1 1 70%;
+  text-align: left;
+  margin-left:16px;
+}
