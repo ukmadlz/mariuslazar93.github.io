@@ -35,7 +35,12 @@ h2{
 }
 
 p{
-  margin-bottom:0.8rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+
+  &:last-child{
+    margin-bottom:0;
+  }
 }
 
 

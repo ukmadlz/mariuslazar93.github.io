@@ -1,16 +1,16 @@
-.media-object{
-  display:flex;
-  justify-content:center;
-  align-items: center;
-  text-align: center;
+.media-object {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.media-left{
-  flex: 1 1 30%;
+.media-left {
+    flex: 1 1 30%;
 }
 
-.media-right{
-  flex: 1 1 70%;
-  text-align: left;
-  margin-left:16px;
+.media-right {
+    flex: 1 1 70%;
+    margin-left: 16px;
+    text-align: justify;
 }

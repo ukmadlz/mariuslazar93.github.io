@@ -29,10 +29,6 @@ a{
   transition: all 0.3s linear;
   &.primary{
     background-color: $accent-color;
-
-    &:hover{
-      background-color: $accent-color-hover;
-    }
   }
 }
 
@@ -49,7 +45,6 @@ a{
   &.primary{
     &:hover{
       color: $accent-color;
-
     }
   }
 }

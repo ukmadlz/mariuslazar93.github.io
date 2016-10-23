@@ -5,17 +5,26 @@ Variables used across the website
 /*************************************
 Colors
 *************************************/
-$white: #fff;
-$black: #000;
+$white: rgba(255,255,255,0.75);
+$black: rgba(0,0,0,0.75);
+$diSerria: #dc965a;
+$flushOrange: #ff7700;
+$fountainBlue: #4eb1ba;
+$cararra: #eaeaea;
+$shark: #222930;
 
-$primary-color: rgba(0,0,0,0.7);
 
-$accent-color: #ff7700;
-$accent-color-hover: #ffab45;
+$primary-color: $white;
 
-$border-color: #90c2e7;
-$panel-color: #f3f9cc;
-$background-color: #f9f9f9;
+$accent-color: $diSerria;
+
+$border-color: $fountainBlue;
+
+$panel-light-color: $diSerria;
+$panel-light-border-color: $fountainBlue;
+$panel-light-background-color: $shark;
+
+$background-color: $shark;
 
 /*************************************
 Fonts
