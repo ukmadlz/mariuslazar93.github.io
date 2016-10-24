@@ -5,38 +5,79 @@
 }
 
 .project-item {
-    flex: 0 1 calc(50% - 2rem - 4px);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    transition: all 0.2s ease;
-    height: 150px;
+    flex: 1 1 calc(50% - 2rem - 4px);
+    background: $shark;
+    color: $primary-color;
     margin: 1rem;
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
-    transform: scale(1);
+    text-align: center;
+    position: relative;
 
     &:hover {
-      transform: scale(1.1);
+        .project-overlay {
+            height: 100%;
+            transition: all 0.8s ease;
+
+            .eye-icon {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0) rotate(-45deg);
+                transition: all 0.6s 0.2s ease;
+            }
+        }
+    }
+
+    .project-title {
+        margin: 0;
+        padding: 1rem 0;
+          background: $diSerria;
+        font-weight: bold;
+        box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.3), 0 3px 3px rgba(0, 0, 0, 0.15), 0 3px 2px -2px rgba(0, 0, 0, 0.2);
+        color: $white;
+        border-top-left-radius:5px;
+        border-top-right-radius:5px;
     }
 }
 
-.project-overlay {
-    background-color: $shark;
-    background-blend-mode: difference;
-    transform: translateY(-50%);
-    text-align: center;
-    margin-top: 75px;
-    padding: 2px 0;
-    border-top: 4px solid $primary-color;
-    border-bottom: 4px solid $primary-color;
+.project-img-wrapper {
+    position: relative;
 }
 
-.project-title {
-    color: $white;
-    text-shadow: 0px 0px 1px $white;
-    font-size: 2rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    padding: 2rem 0.5rem;
-    margin: 0;
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transition: all 0.5s ease;
+    background: rgba(0,0,0,0.8);
+}
+
+.eye-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(-50px) rotate(-90deg);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.eye-icon {
+    color: $diSerria;
+    width: 20px;
+    height: 20px;
+    border: 4px solid currentColor;
+    border-radius: 100%;
+}
+
+.eye-icon:before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 8px;
+    height: 16px;
+    width: 5px;
+    background-color: currentColor;
 }

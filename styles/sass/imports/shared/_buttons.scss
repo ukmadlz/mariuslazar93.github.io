@@ -1,50 +1,69 @@
+a {
+    color: $primary-color;
+    text-decoration: none;
 
-a{
-  color: $primary-color;
-  text-decoration: none;
+    &:hover {}
 
-  &:hover{
+    &:active {}
 
-  }
-
-  &:active{
-
-  }
-
-  &:visited{
-
-  }
+    &:visited {}
 }
 
-.button{
-  width: auto;
-  display: inline-block;
-  text-decoration: none;
-  text-transform: uppercase;
-  cursor: pointer;
-  text-align: center;
-  box-sizing: border-box;
-  color: #eee;
-  padding:10px 15px;
-  transition: all 0.3s linear;
-  &.primary{
-    background-color: $accent-color;
-  }
-}
+.button {
+    width: auto;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+    color: #eee;
+    padding: 10px 15px;
+    transition: all 0.3s linear;
 
-.link{
-  text-decoration: none;
-  cursor: pointer;
-  font-weight: bold;
-  text-transform: lowercase;
-  letter-spacing: 0.2rem;
-  &:hover{
-    text-decoration: underline;
-  }
-
-  &.primary{
-    &:hover{
-      color: $accent-color;
+    &.primary {
+        background-color: $accent-color;
     }
-  }
+}
+
+.link {
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: lowercase;
+    letter-spacing: 0.2rem;
+    position: relative;
+    padding:0 5px;
+    transition: all 0.3s ease;
+
+    &::before {
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        height: 3px;
+        width: 0;
+        opacity:0;
+        content: "";
+        display: block;
+        background: $accent-color;
+        transition: all 0.3s ease;
+    }
+
+    &:hover {
+        text-decoration: none;
+
+        &::before {
+            content: "";
+            width: 100%;
+            opacity:1;
+            transition: all 0.3s ease;
+        }
+    }
+
+    &.primary {
+        &:hover {
+            color: $accent-color;
+            transition: all 0.3s ease;
+        }
+    }
 }

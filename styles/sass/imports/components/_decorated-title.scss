@@ -1,26 +1,27 @@
 .decorated-title {
-            text-align: center;
-            overflow: hidden;
-            display: block;
+    text-align: center;
+    overflow: hidden;
+    display: block;
 
-            &::before, &::after {
-                content: '';
-                background: $border-color;
-                width: 50%;
-                display: inline-block;
-                height: 4px;
-                margin-top:-2px;
-                vertical-align: middle;
-                position: relative;
-            }
+    &::after,
+    &::before {
+        content: '';
+        background: $primary-color;
+        width: 50%;
+        display: inline-block;
+        height: 2px;
+        margin-top: -1px;
+        vertical-align: middle;
+        position: relative;
+    }
 
-            &::before {
-                margin-left: -50%;
-                left: -2rem;
-            }
+    &::before {
+        margin-left: -50%;
+        left: -2rem;
+    }
 
-            &::after {
-                margin-right: -50%;
-                right: -2rem;
-            }
-        }
+    &::after {
+        margin-right: -50%;
+        right: -2rem;
+    }
+}
