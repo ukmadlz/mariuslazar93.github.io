@@ -36,16 +36,10 @@ body {
 h1 {
   font-weight: 700;
   font-family: "Georgia", serif;
-  font-size: 6.4rem;
-  line-height: 6.4rem;
+  font-size: 5.4rem;
+  line-height: 5.4rem;
   margin-top: 0;
   margin-bottom: 2rem;
-}
-
-h1 small {
-  font-size: 50%;
-  text-transform: lowercase;
-  font-style: italic;
 }
 
 h2 {
@@ -53,11 +47,13 @@ h2 {
   font-family: "Georgia", serif;
   font-size: 2rem;
   line-height: 2.6rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
 }
 
 p {
-  margin-bottom: 1.5rem;
   margin-top: 0;
+  margin-bottom: 1.5rem;
 }
 
 p:last-child {
@@ -70,7 +66,7 @@ p:last-child {
   }
 }
 
-@media (max-width: 489px) {
+@media (max-width: 575px) {
   html {
     font-size: 8px;
   }
@@ -260,6 +256,12 @@ body {
   }
 }
 
+@media (max-width: 575px) {
+  .panel {
+    padding: 0;
+  }
+}
+
 /*************************************
 Footer styling
 *************************************/
@@ -409,6 +411,22 @@ Footer styling
           flex: 1 1 70%;
   margin-left: 16px;
   text-align: justify;
+}
+
+@media (max-width: 575px) {
+  .media-object {
+    display: block;
+  }
+  .media-left {
+    float: left;
+    margin: 0 1.5rem 0 0;
+  }
+  .media-left img {
+    max-width: 100px;
+  }
+  .media-right {
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=global.css.map */

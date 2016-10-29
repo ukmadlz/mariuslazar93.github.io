@@ -14,3 +14,23 @@
     margin-left: 16px;
     text-align: justify;
 }
+
+@media (max-width:575px){
+  .media-object{
+    display:block;
+  }
+
+  .media-left{
+    float:left;
+    margin: 0 1.5rem 0 0;
+
+    img{
+      max-width: 100px;
+    }
+  }
+
+  .media-right{
+    margin:0;
+  }
+
+}

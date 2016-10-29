@@ -16,15 +16,10 @@ body{
 h1{
   font-weight: 700;
   font-family: $serif;
-  font-size: 6.4rem;
-  line-height:6.4rem;
+  font-size: 5.4rem;
+  line-height:5.4rem;
   margin-top:0;
   margin-bottom:2rem;
-  small{
-    font-size: 50%;
-    text-transform: lowercase;
-    font-style: italic;
-  }
 }
 
 h2{
@@ -32,11 +27,13 @@ h2{
   font-family: $serif;
   font-size: 2rem;
   line-height: 2.6rem;
+  margin-top:0;
+  margin-bottom:2rem;
 }
 
 p{
-  margin-bottom: 1.5rem;
   margin-top: 0;
+  margin-bottom: 1.5rem;
 
   &:last-child{
     margin-bottom:0;
@@ -50,7 +47,7 @@ p{
   }
 }
 
-@media (max-width: 489px){
+@media (max-width: 575px){
   html{
     font-size:8px;
   }
