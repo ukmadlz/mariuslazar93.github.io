@@ -31,14 +31,14 @@ Font faces
 
 @font-face {
   font-family: 'SourceSansPro';
-  src: url("../fonts/app/SourceSansPro/SourceSansPro-Regular.woff2") format("woff2"), url("../fonts/app/SourceSansPro/SourceSansPro-Regular.woff") format("woff"), url("../fonts/app/SourceSansPro/SourceSansPro-Regular.ttf") format("truetype");
+  src: url("styles/fonts/app/SourceSansPro/SourceSansPro-Regular.woff2") format("woff2"), url("styles/fonts/app/SourceSansPro/SourceSansPro-Regular.woff") format("woff"), url("styles/fonts/app/SourceSansPro/SourceSansPro-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'SourceSansPro';
-  src: url("../fonts/app/SourceSansPro/SourceSansPro-Bold.woff2") format("woff2"), url("../fonts/app/SourceSansPro/SourceSansPro-Bold.woff") format("woff"), url("../fonts/app/SourceSansPro/SourceSansPro-Bold.ttf") format("truetype");
+  src: url("styles/fonts/app/SourceSansPro/SourceSansPro-Bold.woff2") format("woff2"), url("styles/fonts/app/SourceSansPro/SourceSansPro-Bold.woff") format("woff"), url("styles/fonts/app/SourceSansPro/SourceSansPro-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
