@@ -43,9 +43,9 @@ Font faces
   font-style: normal;
 }
 
-.fonts-loaded a span,
 .fonts-loaded body,
-.fonts-loaded p {
+.fonts-loaded a, .fonts-loaded p,
+.fonts-loaded span {
   font-family: 'SourceSansPro', sans-serif;
   font-weight: 400;
 }
@@ -83,6 +83,11 @@ h2 {
   line-height: 2.6rem;
   margin-top: 0;
   margin-bottom: 2rem;
+}
+
+p, a {
+  font-family: "Helvetica", sans-serif;
+  font-weight: 400;
 }
 
 p {
@@ -195,7 +200,6 @@ a {
 .link {
   text-decoration: none;
   cursor: pointer;
-  font-weight: bold;
   text-transform: lowercase;
   letter-spacing: 0.2rem;
   position: relative;
@@ -207,8 +211,8 @@ a {
 .link::before {
   position: absolute;
   left: 0;
-  bottom: -5px;
-  height: 3px;
+  bottom: -4px;
+  height: 1px;
   width: 0;
   opacity: 0;
   content: "";
@@ -223,7 +227,6 @@ a {
 }
 
 .link:hover::before {
-  content: "";
   width: 100%;
   opacity: 1;
   -webkit-transition: all 0.3s ease;

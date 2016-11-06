@@ -29,7 +29,6 @@ a {
 .link {
     text-decoration: none;
     cursor: pointer;
-    font-weight: bold;
     text-transform: lowercase;
     letter-spacing: 0.2rem;
     position: relative;
@@ -39,8 +38,8 @@ a {
     &::before {
         position: absolute;
         left: 0;
-        bottom: -5px;
-        height: 3px;
+        bottom: -4px;
+        height: 1px;
         width: 0;
         opacity:0;
         content: "";
@@ -53,7 +52,6 @@ a {
         text-decoration: none;
 
         &::before {
-            content: "";
             width: 100%;
             opacity:1;
             transition: all 0.3s ease;
