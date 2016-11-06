@@ -1,54 +1,88 @@
 /*************************************
 Font faces
 *************************************/
+@font-face {
+    font-family: 'Bitter';
+    src: url('../fonts/app/Bitter/Bitter-Bold.woff2') format('woff2'), url('../fonts/app/Bitter/Bitter-Bold.woff') format('woff'), url('../fonts/app/Bitter/Bitter-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SourceSansPro';
+    src: url('../fonts/app/SourceSansPro/SourceSansPro-Regular.woff2') format('woff2'),
+    url('../fonts/app/SourceSansPro/SourceSansPro-Regular.woff') format('woff'),
+    url('../fonts/app/SourceSansPro/SourceSansPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SourceSansPro';
+    src: url('../fonts/app/SourceSansPro/SourceSansPro-Bold.woff2') format('woff2'),
+    url('../fonts/app/SourceSansPro/SourceSansPro-Bold.woff') format('woff'),
+    url('../fonts/app/SourceSansPro/SourceSansPro-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.fonts-loaded {
+    a span,
+    body,
+    p {
+        font-family: 'SourceSansPro', sans-serif;
+        font-weight: 400;
+    }
+
+    h1,
+    h2 {
+        font-family: 'Bitter', serif;
+        font-weight: 700;
+    }
+}
 
 html {
-  font-size:10px;
+    font-size: 10px;
 }
 
-body{
-  font-size:1.6rem;
-  line-height:2.4rem;
-  font-family: $sans-serif;
-  color: $primary-color;
+body {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    font-family: $sans-serif;
+    color: $primary-color;
 }
 
-h1{
-  font-weight: 700;
-  font-family: $serif;
-  font-size: 5.4rem;
-  line-height:5.4rem;
-  margin-top:0;
-  margin-bottom:2rem;
+h1 {
+    font-weight: 700;
+    font-family: $serif;
+    font-size: 5.4rem;
+    line-height: 5.4rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
 }
 
-h2{
-  font-weight: 700;
-  font-family: $serif;
-  font-size: 2rem;
-  line-height: 2.6rem;
-  margin-top:0;
-  margin-bottom:2rem;
+h2 {
+    font-weight: 700;
+    font-family: $serif;
+    font-size: 2rem;
+    line-height: 2.6rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
 }
 
-p{
-  margin-top: 0;
-  margin-bottom: 1.5rem;
+p {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
 
-  &:last-child{
-    margin-bottom:0;
-  }
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
-
-
-@media (max-width: 767px){
-  html{
-    font-size:9px;
-  }
+@media (max-width: 767px) {
+    html {
+        font-size: 9px;
+    }
 }
-
-@media (max-width: 575px){
-  html{
-    font-size:8px;
-  }
+@media (max-width: 575px) {
+    html {
+        font-size: 8px;
+    }
 }
