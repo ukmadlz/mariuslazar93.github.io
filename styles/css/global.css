@@ -24,7 +24,7 @@ Font faces
 *************************************/
 @font-face {
   font-family: 'Bitter';
-  src: url("../fonts/app/Bitter/Bitter-Bold.woff2") format("woff2"), url("../fonts/app/Bitter/Bitter-Bold.woff") format("woff"), url("../fonts/app/Bitter/Bitter-Bold.ttf") format("truetype");
+  src: url("styles/fonts/app/Bitter/Bitter-Bold.woff2") format("woff2"), url("../fonts/app/Bitter/Bitter-Bold.woff") format("woff"), url("../fonts/app/Bitter/Bitter-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
