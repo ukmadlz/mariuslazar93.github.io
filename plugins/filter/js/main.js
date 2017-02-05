@@ -1,3 +1,7 @@
 $(function(){
-    FilterComponent.init();
+    var filterComp = new FilterComponent({
+        component: '.filter-component',
+        elementsContainer: '.filter-gallery',
+        controls: '.filter-control'
+    });
 });

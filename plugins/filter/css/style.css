@@ -92,15 +92,13 @@ ul.list-inline li {
     transition: 0.5s ease all;
 }
 
-.filter-gallery.filter-all [data-filter-type] {
+.filter-gallery[data-filter='filter-all'] [data-filter-type] {
     opacity: 1;
     transform: scale(1);
     transition: 1s ease all;
 }
 
-.filter-gallery.filter-blog [data-filter-type='blog'],
-.filter-gallery.filter-news [data-filter-type='news'],
-.filter-gallery.filter-social [data-filter-type='social'] {
+.filter-gallery[data-filter*='filter-blog'] [data-filter-type='filter-blog'], .filter-gallery[data-filter*='filter-news'] [data-filter-type='filter-news'], .filter-gallery[data-filter*='filter-social'] [data-filter-type='filter-social'] {
     opacity: 1;
     transform: scale(1);
 }
