@@ -11,31 +11,9 @@
         var defaults = {
             component: '.filter-component',
             elementsContainer: '.filter-gallery',
-            controls: '.filter-control'
+            controls: '.filter-control',
+            singleFiltering: true
         };
-
-        function handleClickOnControls(e) {
-            e.preventDefault();
-            var $this = $(this),
-                filterValue = $this.attr('data-filter'),
-                galleryFilterData = $elementsContainer.attr('data-filter');
-
-            $this.toggleClass('highlight');
-
-            if (filterValue === 'filter-all') {
-                if ($elementsContainer.attr('data-filter') === 'filter-all') {
-                    $elementsContainer.attr('data-filter', '');
-                } else {
-                    $elementsContainer.attr('data-filter', 'filter-all');
-                    $otherControls.removeClass('highlight');
-                }
-            } else {
-                galleryFilterData = toggleString(galleryFilterData, filterValue);
-                galleryFilterData = removeString(galleryFilterData, 'filter-all');
-                $elementsContainer.attr('data-filter', galleryFilterData);
-                $filterAllControl.removeClass('highlight');
-            }
-        }
 
         function toggleString(str, strToToggle) {
             var indexOfFilterValue = str.indexOf(strToToggle);
@@ -63,8 +41,83 @@
             return str;
         }
 
-        function bindEvents() {
-            $controls.on('click', handleClickOnControls);
+        function handleSingleFiltering(e) {
+            e.preventDefault();
+            var $this = $(this),
+                filterValue = $this.attr('data-filter');
+
+            if ($this.hasClass('highlight')) {
+                $this.removeClass('highlight');
+                $elementsContainer.attr('data-filter', '');
+            } else {
+                $controls.each(function() {
+                    var $current = $(this);
+                    if ($current != $this) {
+                        $current.removeClass('highlight');
+                    }
+                })
+                $this.addClass('highlight');
+                $elementsContainer.attr('data-filter', filterValue);
+            }
+        }
+
+        function handleMultipleFiltering(e) {
+            e.preventDefault();
+            var $this = $(this),
+                filterValue = $this.attr('data-filter'),
+                galleryFilterData = $elementsContainer.attr('data-filter');
+
+            $this.toggleClass('highlight');
+
+            if (filterValue === 'filter-all') {
+                if ($elementsContainer.attr('data-filter') === 'filter-all') {
+                    $elementsContainer.attr('data-filter', '');
+                } else {
+                    $elementsContainer.attr('data-filter', 'filter-all');
+                    $otherControls.removeClass('highlight');
+                }
+            } else {
+                galleryFilterData = toggleString(galleryFilterData, filterValue);
+                galleryFilterData = removeString(galleryFilterData, 'filter-all');
+                $elementsContainer.attr('data-filter', galleryFilterData);
+                $filterAllControl.removeClass('highlight');
+            }
+        }
+
+        function changeFiltering(newOption) {
+            resetFilter();
+            if (opts.singleFiltering) {
+                $controls.off('click', handleSingleFiltering);
+                opts.singleFiltering = false;
+            } else {
+                $controls.off('click', handleMultipleFiltering);
+                opts.singleFiltering = true;
+            }
+
+            switch (newOption) {
+                case 'single':
+                    $controls.on('click', handleSingleFiltering);
+                    break;
+                case 'multiple':
+                    $controls.on('click', handleMultipleFiltering);
+                    break;
+                default:
+                    console.log('Option not available');
+            }
+        }
+
+        function resetFilter() {
+            $elementsContainer.attr('data-filter', 'filter-all');
+            $filterAllControl.addClass('highlight');
+            $otherControls.removeClass('highlight');
+        }
+
+        function bindEvents(opt) {
+            if (opts.singleFiltering) {
+                $controls.on('click', handleSingleFiltering);
+            } else {
+                $controls.on('click', handleMultipleFiltering);
+            }
         }
 
         function init(options) {
@@ -81,6 +134,11 @@
         }
 
         init(options);
+        
+        return {
+            changeFiltering: changeFiltering,
+            reset: resetFilter
+        }
     };
 
     if (global.FilterComponent) {
