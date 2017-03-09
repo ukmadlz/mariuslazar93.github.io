@@ -1,13 +1,4 @@
 /*************************************
-Variables used across the website
-*************************************/
-/*************************************
-Colors
-*************************************/
-/*************************************
-Fonts
-*************************************/
-/*************************************
 This is a partial which contains all SASS files developed for the project.
 *************************************/
 /*************************************
@@ -18,6 +9,9 @@ Colors
 *************************************/
 /*************************************
 Fonts
+*************************************/
+/*************************************
+Breakpoints
 *************************************/
 /*************************************
 Font faces
@@ -174,6 +168,19 @@ p:last-child {
   margin-bottom: 6.4rem;
 }
 
+.visible-xs {
+  display: none;
+}
+
+@media all and (max-width: 767px) {
+  .visible-xs {
+    display: block;
+  }
+  .hidden-xs {
+    display: none;
+  }
+}
+
 a {
   color: #fff;
   text-decoration: none;
@@ -242,16 +249,20 @@ a {
 /*************************************
 Header styling
 *************************************/
-header .global-nav {
+header {
+  position: relative;
+}
+
+.main-nav__list {
   list-style-type: none;
   padding: 0;
 }
 
-header .global-nav li {
+.main-nav__item {
   display: inline-block;
 }
 
-header .global-nav li::after {
+.main-nav__item::after {
   content: "\\";
   font-weight: 700;
   font-size: 16px;
@@ -259,9 +270,153 @@ header .global-nav li::after {
   margin-right: 1rem;
 }
 
-header .global-nav li:last-child::after {
+.main-nav__item:last-child::after {
   content: "";
   margin: 0;
+}
+
+.main-nav__trigger {
+  position: fixed;
+  top: 12px;
+  left: 5px;
+  height: 37px;
+  padding: 5px;
+  z-index: 1000;
+  box-shadow: none;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+.main-nav__trigger:focus {
+  outline: none;
+}
+
+.main-nav__trigger span {
+  display: block;
+  position: relative;
+  width: 33px;
+  height: 4px;
+  background: #fff;
+}
+
+.main-nav__trigger span::after, .main-nav__trigger span::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #fff;
+  left: 0;
+}
+
+.main-nav__trigger span::before {
+  top: -10px;
+  -webkit-transition: background 0.2s ease, top 0.3s ease 0.2s, -webkit-transform 0.2s ease;
+  transition: background 0.2s ease, top 0.3s ease 0.2s, -webkit-transform 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease, top 0.3s ease 0.2s;
+  transition: background 0.2s ease, transform 0.2s ease, top 0.3s ease 0.2s, -webkit-transform 0.2s ease;
+}
+
+.main-nav__trigger span::after {
+  -webkit-transition: background 0.2s ease, bottom 0.3s ease 0.2s, -webkit-transform 0.2s ease;
+  transition: background 0.2s ease, bottom 0.3s ease 0.2s, -webkit-transform 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease, bottom 0.3s ease 0.2s;
+  transition: background 0.2s ease, transform 0.2s ease, bottom 0.3s ease 0.2s, -webkit-transform 0.2s ease;
+  bottom: -10px;
+}
+
+.open .main-nav__trigger span {
+  background: none;
+}
+
+.open .main-nav__trigger span::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background: rgba(0, 0, 0, 0.75);
+  -webkit-transition: background 0.2s ease, top 0.2s ease, -webkit-transform 0.3s ease 0.2s;
+  transition: background 0.2s ease, top 0.2s ease, -webkit-transform 0.3s ease 0.2s;
+  transition: background 0.2s ease, top 0.2s ease, transform 0.3s ease 0.2s;
+  transition: background 0.2s ease, top 0.2s ease, transform 0.3s ease 0.2s, -webkit-transform 0.3s ease 0.2s;
+}
+
+.open .main-nav__trigger span::after {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  background: rgba(0, 0, 0, 0.75);
+  -webkit-transition: background 0.2s ease, bottom 0.2s ease, -webkit-transform 0.3s ease 0.2s;
+  transition: background 0.2s ease, bottom 0.2s ease, -webkit-transform 0.3s ease 0.2s;
+  transition: background 0.2s ease, bottom 0.2s ease, transform 0.3s ease 0.2s;
+  transition: background 0.2s ease, bottom 0.2s ease, transform 0.3s ease 0.2s, -webkit-transform 0.3s ease 0.2s;
+}
+
+@media all and (max-width: 767px) {
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: -webkit-transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+    z-index: 999;
+  }
+  .open .main-nav {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .main-nav__list {
+    margin-top: 8rem;
+  }
+  .main-nav__item {
+    display: block;
+    padding: 1.5rem 0;
+  }
+  .main-nav__item::after {
+    display: none;
+  }
+  .main-nav .link {
+    color: rgba(0, 0, 0, 0.75);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2rem;
+  }
+  .main-nav .link::before {
+    height: 2px;
+  }
+  .mobile-nav-bar {
+    height: 60px;
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  }
+  .mobile-nav-bar .phone {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    font-style: italic;
+  }
+  .mobile-nav-bar .phone:hover::before {
+    display: none;
+  }
 }
 
 /*************************************
@@ -297,7 +452,12 @@ body {
 
 @media (max-width: 767px) {
   body {
-    padding: 2rem 1rem;
+    padding: 0;
+    margin: 0;
+    padding-top: 75px;
+  }
+  .page-wrapper {
+    padding: 1rem;
   }
 }
 
@@ -319,12 +479,20 @@ Footer styling
 .decorated-title::after, .decorated-title::before {
   content: '';
   background: #fff;
-  width: 50%;
+  width: 0;
   display: inline-block;
   height: 2px;
   margin-top: -1px;
   vertical-align: middle;
   position: relative;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: slideIn;
+          animation-name: slideIn;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
 .decorated-title::before {
@@ -335,6 +503,24 @@ Footer styling
 .decorated-title::after {
   margin-right: -50%;
   right: -2rem;
+}
+
+@-webkit-keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
 }
 
 .projects-container {
@@ -393,6 +579,13 @@ Footer styling
   margin: 0 auto;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+@media all and (max-width: 767px) {
+  .project-item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 
 .media-object {

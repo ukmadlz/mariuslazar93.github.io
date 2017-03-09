@@ -1,9 +1,6 @@
 // Include gulp
 var gulp = require('gulp');
 
-// Inlude Browser-Sync
-var browserSync = require('browser-sync').create();
-
 // Include SASS/CSS plugins
 var sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
@@ -34,8 +31,7 @@ gulp.task('sass', function () {
         .pipe(sass(config.sassOptions).on('error', sass.logError))
         .pipe(autoprefixer())
         .pipe(sourceMaps.write(config.outputSourceMaps))
-        .pipe(gulp.dest(config.outputSASS))
-        .pipe(browserSync.stream());
+        .pipe(gulp.dest(config.outputSASS));
 
 });
 
@@ -53,20 +49,9 @@ gulp.task('minify', ['sass'], function () {
         .pipe(gulp.dest(config.outputSASS));
 });
 
-
-gulp.task('browser-sync', ['minify'], function () {
-    var files = [
-       './styles/css/global.css',
-       './*.html'
-    ];
-    browserSync.init(files, {
-        server: "./"
-    });
-});
-
 // Watch files for changes
-gulp.task('watch', ['browser-sync'], function () {
-    gulp.watch(config.inputSASS, ['minify']);
+gulp.task('watch', ['sass'], function () {
+    gulp.watch(config.inputSASS, ['sass']);
 });
 
 gulp.task('default', ['watch']);

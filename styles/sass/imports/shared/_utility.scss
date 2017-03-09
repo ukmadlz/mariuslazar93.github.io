@@ -52,3 +52,17 @@
 .spacer-bottom-xl{
   margin-bottom:6.4rem;
 }
+
+.visible-xs{
+  display: none;
+}
+
+@media all and (max-width: $mobile){
+  .visible-xs{
+    display: block;
+  }
+
+  .hidden-xs{
+    display: none;
+  }
+}

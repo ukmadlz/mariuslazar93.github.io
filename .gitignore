@@ -42,3 +42,7 @@ npm-debug.log*
 
 # Optional eslint cache
 .eslintcache
+
+
+#Visual Studio Code
+.vscode

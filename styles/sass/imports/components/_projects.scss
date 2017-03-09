@@ -45,3 +45,10 @@
     margin: 0 auto;
     transform: translateY(-50%);
 }
+
+
+@media all and (max-width: $mobile){
+    .project-item{
+        flex-basis: 100%;
+    }
+}

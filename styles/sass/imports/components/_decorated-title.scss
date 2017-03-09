@@ -2,26 +2,36 @@
     text-align: center;
     overflow: hidden;
     display: block;
-
     &::after,
     &::before {
         content: '';
         background: $primary-color;
-        width: 50%;
+        width: 0;
         display: inline-block;
         height: 2px;
         margin-top: -1px;
         vertical-align: middle;
         position: relative;
+        animation-duration: 3s;
+        animation-name: slideIn;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
     }
-
     &::before {
         margin-left: -50%;
         left: -2rem;
     }
-
     &::after {
         margin-right: -50%;
         right: -2rem;
+    }
+}
+
+@keyframes slideIn{
+    from {
+        width: 0;
+    }
+    to {
+        width: 50%;
     }
 }
