@@ -4,27 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portfolio</title>
-    <script>
-        (function (w) {
-            var loadJS = function (src, cb) {
-                "use strict";
-                var ref = w.document.getElementsByTagName("script")[0];
-                var script = w.document.createElement("script");
-                script.src = src;
-                script.async = true;
-                ref.parentNode.insertBefore(script, ref);
-                return script;
-            };
-            w.loadJS = loadJS;
-        }(this));
-
-        if (!sessionStorage.fontsLoaded) {
-            loadJS('scripts/vendor/FontFaceObserver/fontfaceobserver.js');
-        } else {
-            document.documentElement.classList.add('fonts-loaded')
-        }
-    </script>
+    <title>Marius Lazar Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Bitter:700|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="styles/css/global.css">
 </head>
 
@@ -57,14 +38,18 @@
                             </div>
                             <div class="media-right">
                                 <p>
-                                    Hi there! I will keep this intro pretty short, but don't hesitate to contact me on my phone/email/skype.
+                                    Hi there! Welcome to my portfolio page!
                                 </p>
                                 <p>
-                                    I'm currently working in Cluj-Napoca, Romania at Luminos Labs as a Front-End Developer.
+                                    I am a Front-End Developer and I build websites for a living.
                                 </p>
                                 <p>
-                                    For the moment I'm focused on studying advance JavaScript and web performance concepts, but also keeping an eye out for new
-                                    stuff like build tools and ReactJS.
+                                    The technologies that I use the most are HTML, CSS, JavaScript, jQuery, Bootstrap, SASS, Gulp, Webpack and Git. Ocasionally,
+                                    I also work on the back-end side using the Microsoft stack (C#, MVC ASP.NET, IIS).
+                                </p>
+                                <p>
+                                    I am a really passionate learner and I love to study new ways of building things. Currently, I'm focused on improving my
+                                    JavaScript and learning about React.JS.
                                 </p>
                                 <p>Check my
                                     <a class="link primary" href="//www.dropbox.com/s/u7q41172wjkqohu/CV-MariusLazar.pdf?dl=0">CV</a>,
@@ -78,38 +63,22 @@
                 <section id="work" class="spacer-bottom-l">
                     <h2 class="decorated-title spacer-bottom-l">work</h2>
                     <div class="projects-container">
-                        <a href="#" class="project-item" target="_blank" style="background-image: url(styles/images/assets/placeholder-500x300.png)">
-                            <div class="project-overlay">
-                                <h3 class="project-title">Project</h3>
-                            </div>
-                        </a>
-                        <a href="#" class="project-item" target="_blank" style="background-image: url(styles/images/assets/placeholder-500x300.png)">
-                            <div class="project-overlay">
-                                <h3 class="project-title">Project</h3>
-                            </div>
-                        </a>
-                        <a href="#" class="project-item" target="_blank" style="background-image: url(styles/images/assets/placeholder-500x300.png)">
-                            <div class="project-overlay">
-                                <h3 class="project-title">Project</h3>
-                            </div>
-                        </a>
-                        <a href="#" class="project-item" target="_blank" style="background-image: url(styles/images/assets/placeholder-500x300.png)">
-                            <div class="project-overlay">
-                                <h3 class="project-title">Project</h3>
-                            </div>
-                        </a>
+                        <div class="project"><img src="styles/images/assets/client1_white.png" alt=""></div>
+                        <div class="project"><img src="styles/images/assets/client2_white.png" alt=""></div>
+                        <div class="project"><img src="styles/images/assets/client3_white.png" alt=""></div>
+                        <div class="project"><img src="styles/images/assets/client4_white.png" alt=""></div>
+                        <div class="project"><img src="styles/images/assets/client5_white.png" alt=""></div>
+                        <div class="project"><img src="styles/images/assets/client6_white.png" alt=""></div>
+                        <div class="project"><img src="styles/images/assets/client7_white.png" alt=""></div>
                     </div>
                 </section>
-                <!-- <section id="resources" class="spacer-bottom-l text-center">
-                    <h2 class="decorated-title spacer-bottom-l">userful resources</h2>
-                        <a class="link primary" href="https://www.frontendhandbook.com/">Front-End Developer Handbook</a>
-                </section> -->
                 <section id="contact" class="spacer-bottom-l text-center">
                     <h2 class="decorated-title spacer-bottom-l">contact</h2>
-                    <a class="link primary" href="emailto: mariuslazar93@yahoo.ro">mariuslazar93@yahoo.ro</a>
+                    <a class="link primary" href="emailto: mariuslazar93@yahoo.ro">mariuslazar93@yahoo.ro</a><br>
+                    <a class="link primary hidden-xs" href="tel:07731709279">07731709279</a>
                 </section>
             </main>
-            <footer class="text-center spacer-top-l">
+            <footer class="text-center spacer-top-xl">
                 &copy; Marius Lazar 2016
             </footer>
         </div>

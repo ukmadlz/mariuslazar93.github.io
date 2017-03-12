@@ -2,6 +2,17 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: center;
+}
+
+.project{
+    flex: auto;
+    margin: 1rem;
+    text-align: center;
+    > img{
+        max-width: 150px;
+        height: auto;
+    }
 }
 
 .project-item {
@@ -50,5 +61,10 @@
 @media all and (max-width: $mobile){
     .project-item{
         flex-basis: 100%;
+    }
+    .project{
+        > img {
+            max-width: 100px;
+        }
     }
 }

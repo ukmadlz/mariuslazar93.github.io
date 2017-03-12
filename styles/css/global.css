@@ -16,54 +16,89 @@ Breakpoints
 /*************************************
 Font faces
 *************************************/
-@font-face {
-  font-family: 'Bitter';
-  src: url("../fonts/app/Bitter/Bitter-Bold.woff2") format("woff2"), url("../fonts/app/Bitter/Bitter-Bold.woff") format("woff"), url("../fonts/app/Bitter/Bitter-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
+/*
+    For Font Observer - include in head
+
+<script>
+        (function (w) {
+            var loadJS = function (src, cb) {
+                "use strict";
+                var ref = w.document.getElementsByTagName("script")[0];
+                var script = w.document.createElement("script");
+                script.src = src;
+                script.async = true;
+                ref.parentNode.insertBefore(script, ref);
+                return script;
+            };
+            w.loadJS = loadJS;
+        }(this));
+
+        if (!sessionStorage.fontsLoaded) {
+            loadJS('scripts/vendor/FontFaceObserver/fontfaceobserver.js');
+        } else {
+            document.documentElement.classList.add('fonts-loaded')
+        }
+    </script>
+
+
+
 
 @font-face {
-  font-family: 'SourceSansPro';
-  src: url("../fonts/app/SourceSansPro/SourceSansPro-Regular.woff2") format("woff2"), url("../fonts/app/SourceSansPro/SourceSansPro-Regular.woff") format("woff"), url("../fonts/app/SourceSansPro/SourceSansPro-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
+    font-family: 'Bitter';
+    src: url('../fonts/app/Bitter/Bitter-Bold.woff2') format('woff2'),
+    url('../fonts/app/Bitter/Bitter-Bold.woff') format('woff'),
+    url('../fonts/app/Bitter/Bitter-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
 }
-
 @font-face {
-  font-family: 'SourceSansPro';
-  src: url("../fonts/app/SourceSansPro/SourceSansPro-Bold.woff2") format("woff2"), url("../fonts/app/SourceSansPro/SourceSansPro-Bold.woff") format("woff"), url("../fonts/app/SourceSansPro/SourceSansPro-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
+    font-family: 'SourceSansPro';
+    src: url('../fonts/app/SourceSansPro/SourceSansPro-Regular.woff2') format('woff2'),
+    url('../fonts/app/SourceSansPro/SourceSansPro-Regular.woff') format('woff'),
+    url('../fonts/app/SourceSansPro/SourceSansPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SourceSansPro';
+    src: url('../fonts/app/SourceSansPro/SourceSansPro-Bold.woff2') format('woff2'),
+    url('../fonts/app/SourceSansPro/SourceSansPro-Bold.woff') format('woff'),
+    url('../fonts/app/SourceSansPro/SourceSansPro-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
 }
 
-.fonts-loaded body,
-.fonts-loaded a, .fonts-loaded p,
-.fonts-loaded span {
-  font-family: 'SourceSansPro', sans-serif;
-  font-weight: 400;
+.fonts-loaded {
+    body,
+    a, p,
+    span {
+        font-family: 'SourceSansPro', sans-serif;
+        font-weight: 400;
+    }
+
+    h1,
+    h2 {
+        font-family: 'Bitter', serif;
+        font-weight: 700;
+    }
 }
 
-.fonts-loaded h1,
-.fonts-loaded h2 {
-  font-family: 'Bitter', serif;
-  font-weight: 700;
-}
-
+*/
 html {
   font-size: 10px;
 }
 
 body {
-  font-size: 1.8rem;
-  line-height: 2.4rem;
-  font-family: "Helvetica", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
   color: #fff;
 }
 
 h1 {
   font-weight: 700;
-  font-family: "Arial", serif;
+  font-family: "Bitter", serif;
   font-size: 5.4rem;
   line-height: 5.4rem;
   margin-top: 0;
@@ -72,7 +107,7 @@ h1 {
 
 h2 {
   font-weight: 700;
-  font-family: "Arial", serif;
+  font-family: "Bitter", serif;
   font-size: 2rem;
   line-height: 2.6rem;
   margin-top: 0;
@@ -80,7 +115,7 @@ h2 {
 }
 
 p, a {
-  font-family: "Helvetica", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
 }
 
@@ -396,7 +431,7 @@ header {
   }
   .mobile-nav-bar {
     height: 60px;
-    background: #000;
+    background: #dc965a;
     position: fixed;
     top: 0;
     left: 0;
@@ -432,7 +467,7 @@ Main layout styling
 
 body {
   padding: 4rem 2rem;
-  background-color: #222930;
+  background-color: #2c3e50;
 }
 
 .page-wrapper {
@@ -532,6 +567,22 @@ Footer styling
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.project {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  margin: 1rem;
+  text-align: center;
+}
+
+.project > img {
+  max-width: 150px;
+  height: auto;
 }
 
 .project-item {
@@ -586,6 +637,9 @@ Footer styling
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
+  .project > img {
+    max-width: 100px;
+  }
 }
 
 .media-object {
@@ -611,7 +665,7 @@ Footer styling
   -webkit-box-flex: 1;
       -ms-flex: 1 1 70%;
           flex: 1 1 70%;
-  margin-left: 16px;
+  margin-left: 32px;
   text-align: left;
 }
 
