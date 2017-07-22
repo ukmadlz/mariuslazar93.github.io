@@ -4,26 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
     <title>Marius Lazar Portfolio</title>
     <link href="https://fonts.googleapis.com/css?family=Bitter:700|Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="styles/css/global.css">
+    <link rel="stylesheet" href="styles/css/global.min.css">
 </head>
 
 <body>
     <div class="page-wrapper">
         <div class="page-content">
             <header class="spacer-bottom-l text-center">
-                <!--<div class="mobile-nav-bar visible-xs">
-                    <a href="tel:07731709279" class="link phone">07731709279</a>
-                </div>-->
                 <h1 class="spacer-bottom-l">Marius Lazar</h1>
-                <!--<button class="main-nav__trigger trigger-nav visible-xs">
-                    <span></span>
-                </button>-->
                 <nav class="main-nav">
                     <ul class="main-nav__list">
                         <li class="main-nav__item"><a href="#bio" class="link primary">bio</a></li>
                         <li class="main-nav__item"><a href="#work" class="link primary">work</a></li>
+                        <li class="main-nav__item"><a href="#projects" class="link primary">projects</a></li>
                         <li class="main-nav__item"><a href="#contact" class="link primary">contact</a></li>
                     </ul>
                 </nav>
@@ -38,18 +34,14 @@
                             </div>
                             <div class="media-right">
                                 <p>
-                                    Hi there! Welcome to my portfolio page!
+                                    Hi there! I'm glad you are here!
                                 </p>
                                 <p>
-                                    I am a Front-End Developer and I build websites for a living.
+                                    I am a Front-End Developer and I build websites/webapps for a living.
                                 </p>
                                 <p>
-                                    The technologies that I use the most are HTML, CSS, JavaScript, jQuery, Bootstrap, SASS, Gulp, Webpack and Git. Ocasionally,
-                                    I also work on the back-end side using the Microsoft stack (C#, MVC ASP.NET, IIS).
-                                </p>
-                                <p>
-                                    I am a really passionate learner and I love to study new ways of building things. Currently, I'm focused on improving my
-                                    JavaScript and learning about React.JS.
+                                    I am really enthusiastic about JavaScript and it's ecosystem of frameworks and tools that make our life easier.
+                                    I consider myself a passionate learner and that's why I like to keep up with all the latest technologies and best practices.
                                 </p>
                                 <p>Check my
                                     <a class="link primary" href="//www.dropbox.com/s/u7q41172wjkqohu/CV-MariusLazar.pdf?dl=0">CV</a>,
@@ -62,6 +54,29 @@
                 </section>
                 <section id="work" class="spacer-bottom-l">
                     <h2 class="decorated-title spacer-bottom-l">work</h2>
+                    <h3><a class="link active" href="//packtpub.com">Packt:</a> march 2017 - present</h3>
+                    <p>
+                        At Packt I had the chance to practice and understand how Angular works and what are the advanges
+                        of using it. Besides Angular, I had to get up to speed with REST API's, Amazon Web Services and JWT, but also keeping an
+                        eye open for performance improvements and PWA.
+                    </p>
+                    <p>
+                        In my spare time I started to practice more Nodejs and REST API, which are our backend techs, but I'm also intrested in Heroku and AWS
+                        which seems to be the future.
+                    </p>
+                    <h3><a class="link active" href="//luminoslabs.com">Luminos Labs:</a> july 2015 - present</h3>
+                    <p>
+                        At Luminos Labs I am mostly working on the UI using SASS and pure JS/jQuery. I was always very interested in helping my colleagues with JavaScript problems
+                        and building small JavaScript components where it was the case. The technologies that I'm using the most are HTML, CSS, JavaScript, jQuery, Bootstrap, SASS, Gulp, Webpack and Git.
+                        Ocasionally, I also work on the back-end side using the Microsoft stack (C#, MVC ASP.NET, IIS) and EPiServer.
+                    </p>
+                    <p>
+                        In my spare time I started to learn about React, Redux, ES6 and Webpack. As a result I have built some small projects that you can find
+                        on my Github.
+                    </p>
+                </section>
+                <section id="projects" class="spacer-bottom-l">
+                    <h2 class="decorated-title spacer-bottom-l">projects</h2>
                     <div class="projects-container">
                         <div class="project"><img src="styles/images/assets/client1_white.png" alt=""></div>
                         <div class="project"><img src="styles/images/assets/client2_white.png" alt=""></div>
@@ -85,5 +100,4 @@
     </div>
     <script src="scripts/main.js"></script>
 </body>
-
 </html>

@@ -64,4 +64,8 @@ a {
             transition: all 0.3s ease;
         }
     }
+
+    &.active {
+        color: $accent-color;
+    }
 }

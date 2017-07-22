@@ -1,32 +1,27 @@
 (function () {
-    var menuTrigger = document.querySelector('.main-nav__trigger');
-    var mainNavItem = document.querySelectorAll('.main-nav__item a');
+    "use strict";
 
-    mainNavItem.forEach(function (item) {
-        item.addEventListener('click', function (e) {
-            e.preventDefault();
-            var startPoint = this.href.indexOf('#');
-            var href = this.href.slice(startPoint);
-            var toElement = document.querySelector(href);
-            var toElementOffset = toElement.offsetTop;
+    init();
 
-            if(document.body.classList.contains('open')){
-                toElementOffset -= 60;
-            }
-            document.body.classList.remove('open');
+    function init() {
+        var mainNavItem = document.querySelectorAll('.main-nav__item a');
+        var slideItems = document.querySelectorAll('.decorated-title');
 
-            scrollTo(document.body, toElementOffset, 500);
+        mainNavItem.forEach(function (item) {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                var startPoint = this.href.indexOf('#');
+                var href = this.href.slice(startPoint);
+                var toElement = document.querySelector(href);
+                var toElementOffset = toElement.offsetTop;
+                scrollTo(document.body, toElementOffset, 500);
+            });
         });
-    });
-    menuTrigger.addEventListener('click', function () {
-        document.body.classList.toggle('open');
-    });
 
-
-    var slideItems = document.querySelectorAll('.decorated-title');
-    slideItems.forEach(function (item) {
-        item.classList.add('active');
-    });
+        slideItems.forEach(function (item) {
+            item.classList.add('active');
+        });
+    }
 
     function scrollTo(element, to, duration) {
         if (duration <= 0) return;

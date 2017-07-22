@@ -90,6 +90,8 @@ h1 {
     line-height: 5.4rem;
     margin-top: 0;
     margin-bottom: 2rem;
+
+
 }
 
 h2 {
@@ -99,6 +101,11 @@ h2 {
     line-height: 2.6rem;
     margin-top: 0;
     margin-bottom: 2rem;
+
+    small {
+        font-weight: 400;
+        font-size: 75%;
+    }
 }
 
 p, a{
