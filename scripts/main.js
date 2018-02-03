@@ -13,8 +13,7 @@
                 var startPoint = this.href.indexOf('#');
                 var href = this.href.slice(startPoint);
                 var toElement = document.querySelector(href);
-                var toElementOffset = toElement.offsetTop;
-                scrollTo(document.body, toElementOffset, 500);
+                scrollTo(toElement, 500);
             });
         });
 
@@ -23,19 +22,23 @@
         });
     }
 
-    function scrollTo(element, to, duration) {
-        if (duration <= 0) return;
-        var difference = to - element.scrollTop;
-        var perTick = difference / duration * 10;
+    function scrollTo(element, duration) {
+        var elementY = element.offsetTop;
+        var windowY = window.pageYOffset;
+        var start = 0;
+        var difference = elementY - element.scrollTop;
 
-        var timeout = setTimeout(function () {
-            element.scrollTop = element.scrollTop + perTick;
-            if (element.scrollTop >= to) {
-                clearTimeout(timeout);
+        window.requestAnimationFrame(function step(timestamp) {
+            if (!start) start = timestamp;
 
-            } else {
-                scrollTo(element, to, duration - 10);
+            var time = timestamp - start;
+            var percent = Math.min(time / duration, 1);
+
+            window.scrollTo(0, windowY + difference * percent);
+
+            if (time < duration) {
+              window.requestAnimationFrame(step);
             }
-        }, 10);
+          })
     }
 })();

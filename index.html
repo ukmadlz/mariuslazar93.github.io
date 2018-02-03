@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content="Portofolio describing Marius Lazar Front-End Developer Experience"/>
-    <meta name="keywords" content="marius lazar, front-end developer, javascript, sass, angular, react"/>
-    <meta name="robots" content="index, follow"/>
     <link rel="dns-prefetch" href="https://fonts.googleapis.com/"/>
     <title>Marius Lazar Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Portofolio describing Marius Lazar Front-End Developer Experience"/>
+    <meta name="keywords" content="marius lazar, front-end developer, javascript, angular, react, express, nodejs"/>
+    <meta name="robots" content="index, follow"/>
     <link href="https://fonts.googleapis.com/css?family=Bitter:700|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="styles/css/global.min.css">
 </head>
@@ -21,6 +21,7 @@
                 <nav class="main-nav">
                     <ul class="main-nav__list">
                         <li class="main-nav__item"><a href="#bio" class="link primary">bio</a></li>
+                        <li class="main-nav__item"><a href="#recent" class="link primary">recent</a></li>
                         <li class="main-nav__item"><a href="#work" class="link primary">work</a></li>
                         <li class="main-nav__item"><a href="#projects" class="link primary">projects</a></li>
                         <li class="main-nav__item"><a href="#contact" class="link primary">contact</a></li>
@@ -30,50 +31,37 @@
             <main>
                 <section id="bio" class="spacer-bottom-l">
                     <h2 class="decorated-title spacer-bottom-l">bio</h2>
-                    <div class="panel">
-                        <div class="media-object">
-                            <div class="media-left">
-                                <img class="img-responsive img-circle" src="styles/images/assets/avatar.jpg" alt="Marius Lazar" />
-                            </div>
-                            <div class="media-right">
-                                <p>
-                                    Hi there! I'm glad you are here!
-                                </p>
-                                <p>
-                                    I am a Front-End Developer and I build websites/webapps for a living.
-                                </p>
-                                <p>
-                                    I am really enthusiastic about JavaScript and its ecosystem of frameworks and tools that make our life easier. I consider myself a passionate learner and that's why I like to keep up with all the latest technologies and best practices.
-                                </p>
-                                <p>Check my
-                                    <a class="link primary" href="//www.dropbox.com/s/u7q41172wjkqohu/CV-MariusLazar.pdf?dl=0">CV</a>,
-                                    <a class="link primary" href="//github.com/mariuslazar93">GITHUB</a> or
-                                    <a class="link primary" href="//codepen.io/mariuslazar93/">CODEPEN</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <p>
+                        I'm a passionate Web developer who's working and playing with JavaScript everyday.
+                    </p>
+                    <p>
+                        I have experience mostly in the ME(A/R)N stack, but I've also been trying out some DevOps stuff like
+                        AWS, Heroku or CircleCI.
+                    </p>
+                    <p>
+                        In my free time, I like to travel and meet new people. I enjoy spending time in nature, being it hiking
+                        or just hanging out with friends. I love coffe and board games and sometimes, cooking.
+                    </p>
+                </section>
+                <section id="recent" class="spacer-bottom-l">
+                    <h2 class="decorated-title spacer-bottom-l">recent</h2>
+                    <ul>
+                        <li>
+                            <a class="link primary" href="https://medium.freecodecamp.org/our-journey-for-using-circleci-2-0-to-build-and-deploy-an-angular-app-to-aws-s3-8e7ea3f51503">
+                                How we used CircleCI 2.0 to build and deploy an Angular app to AWS S3
+                            </a>
+                        </li>
+                    </ul>
                 </section>
                 <section id="work" class="spacer-bottom-l">
                     <h2 class="decorated-title spacer-bottom-l">work</h2>
                     <h3><a class="link active" href="//packtpub.com">Packt:</a> march 2017 - present, Birmingham, UK</h3>
-                    <p>
-                        At Packt I had the chance to practice and understand how Angular works and what are the advantages of using it. Besides Angular, I had to get up to speed with REST API's, Amazon Web Services and JWT, but also keeping an eye open for performance improvements and PWA.
-                    </p>
-                    <p>
-                        In my spare time I started to practice more Nodejs and REST API, which are our backend techs, but I'm also interested in Heroku and AWS which seems to be the future.
-                    </p>
-                    <h3><a class="link active" href="//luminoslabs.com">Luminos Labs:</a> july 2015 - present, Cluj, RO</h3>
-                    <p>
-                        At Luminos Labs I am mostly working on the UI using SASS and pure JS/jQuery. I was always very interested in helping my colleagues with JavaScript problems and building small JavaScript components where it was the case. The technologies that I'm using the most are HTML, CSS, JavaScript, jQuery, Bootstrap, SASS, Gulp, Webpack and Git. Occasionally, I also work on the back-end side using the Microsoft stack (C#, MVC ASP.NET, IIS) and EPiServer.
-                    </p>
-                    <p>
-                        In my spare time I started to learn about React, Redux, ES6 and Webpack. As a result I have built some small projects that you can find on my Github.
-                    </p>
+                    <h3><a class="link active" href="//luminoslabs.com">Luminos Labs:</a> july 2015 - december 2017, Cluj, RO</h3>
                 </section>
                 <section id="projects" class="spacer-bottom-l">
                     <h2 class="decorated-title spacer-bottom-l">projects</h2>
                     <div class="projects-container">
+                        <div class="project"><img src="styles/images/assets/packt.png" alt="Packt"></div>
                         <div class="project"><img src="styles/images/assets/client1_white.png" alt=""></div>
                         <div class="project"><img src="styles/images/assets/client2_white.png" alt=""></div>
                         <div class="project"><img src="styles/images/assets/client3_white.png" alt=""></div>
@@ -85,8 +73,9 @@
                 </section>
                 <section id="contact" class="spacer-bottom-l text-center">
                     <h2 class="decorated-title spacer-bottom-l">contact</h2>
-                    <a class="link primary" href="emailto: mariuslazar93@yahoo.ro">mariuslazar93@yahoo.ro</a><br>
-                    <a class="link primary" href="tel:07731709279">07731709279</a>
+                    <a class="link primary" href="https://github.com/mariuslazar93">Github</a>
+                    <a class="link primary" href="https://twitter.com/mariuslazar_93">Twitter</a>
+                    <a class="link primary" href="https://www.linkedin.com/in/marius-lazar-ba062291/">LinkedIn</a>
                 </section>
             </main>
             <footer class="text-center spacer-top-xl">
@@ -94,6 +83,6 @@
             </footer>
         </div>
     </div>
-    <script src="scripts/main.js"></script>
+    <script src="scripts/main.min.js"></script>
 </body>
 </html>

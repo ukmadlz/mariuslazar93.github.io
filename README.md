@@ -1,2 +1,2 @@
-# mariuslazar93.github.io
-Personal portofolio
+# Personal portofolio
+A little bit about me...
